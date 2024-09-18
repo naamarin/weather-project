@@ -38,6 +38,20 @@ h1 {
   transition: background-color 0.3s ease-in-out; /* Smooth transition for background color */
 }
 
+/* Temperature-based color classes for weather-info */
+.weather-gray {
+  background-color: #d3d3d3; /* Gray for temperatures ≤ 20°C */
+ 
+}
+
+.weather-light-blue {
+  background-color: #add8e6; /* Light blue for temperatures between 20°C and 30°C */
+}
+
+.weather-yellow-orange {
+  background-color: #ffa50080; /* Yellow-orange for temperatures ≥ 30°C */
+}
+
 .weather-info img {
   width: 100px; 
   height: 100px; 

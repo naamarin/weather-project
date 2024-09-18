@@ -40,6 +40,19 @@ function App() {
     fetchWeatherData();
   }, []);
 
+  // Function to determine the color class based on the temperature
+  const getTempClass = (cityId) => {
+    if (!weatherData[cityId]) return '';
+    const temp = weatherData[cityId].main.temp;
+
+    if (temp <= 20) {
+      return 'weather-gray';
+    } else if (temp > 20 && temp < 30) {
+      return 'weather-light-blue';
+    } else {
+      return 'weather-yellow-orange';
+    }
+  };
 
   return(
     <div className="App">
@@ -57,7 +70,7 @@ function App() {
     </div>
 
     {weatherData[activeCity] ? (
-      <div className="weather-info">
+      <div className={`weather-info ${getTempClass(activeCity)}`}>
         <h2>{weatherData[activeCity].name}</h2>
         <img src={`http://openweathermap.org/img/w/${weatherData[activeCity].weather[0].icon}.png`} alt="Weather Icon" />
         <p>תיאור: {weatherData[activeCity].weather[0].description}</p>
