@@ -1,18 +1,19 @@
+body {
+  background-image: url('../images/background.png');
+  background-size: cover;
+  background-position: center;
+}
+
 .App {
   font-family: Arial, sans-serif;
   text-align: center;
   direction: rtl;
-  background-image: url('../images/background.png');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat; /* Prevents the image from repeating */
-  background-attachment: fixed;
-  height: 100vh; /* Ensures the background covers the full height of the viewport */
-  margin: 0; /* Removes default margins */
+
 }
 
 h1 {
   margin-bottom: 20px;
+  color: #ffffff;
 }
 
 .tabs {
