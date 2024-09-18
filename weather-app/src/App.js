@@ -56,7 +56,19 @@ function App() {
       ))}
     </div>
 
+    {weatherData[activeCity] ? (
+      <div className="weather-info">
+        <h2>{weatherData[activeCity].name}</h2>
+        <img src={`http://openweathermap.org/img/w/${weatherData[activeCity].weather[0].icon}.png`} alt="Weather Icon" />
+        <p>תיאור: {weatherData[activeCity].weather[0].description}</p>
+        <p>טמפרטורה: {weatherData[activeCity].main.temp}°C</p>
+        <p>טמפרטורה מורגשת: {weatherData[activeCity].main.feels_like}°C</p>
+        <p>לחות: {weatherData[activeCity].main.humidity}%</p>
 
+      </div>
+    ) : (
+      <p>טוען נתונים...</p>
+    )}
 </div>
 );
 }
