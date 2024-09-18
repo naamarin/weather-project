@@ -38,7 +38,7 @@ function App() {
     };
 
     fetchWeatherData();
-  }, []);
+  }, [activeCity]);
 
   // Function to determine the color class based on the temperature
   const getTempClass = (cityId) => {
@@ -71,13 +71,15 @@ function App() {
 
     {weatherData[activeCity] ? (
       <div className={`weather-info ${getTempClass(activeCity)}`}>
-        <h2>{weatherData[activeCity].name}</h2>
-        <img src={`http://openweathermap.org/img/w/${weatherData[activeCity].weather[0].icon}.png`} alt="Weather Icon" />
-        <p>תיאור: {weatherData[activeCity].weather[0].description}</p>
-        <p>טמפרטורה: {weatherData[activeCity].main.temp}°C</p>
-        <p>טמפרטורה מורגשת: {weatherData[activeCity].main.feels_like}°C</p>
-        <p>לחות: {weatherData[activeCity].main.humidity}%</p>
-
+        <div className="box">
+          <div className='weather'>
+            <img src={`http://openweathermap.org/img/wn/${weatherData[activeCity].weather[0].icon}@2x.png`} alt="Weather Icon" />
+            <p className='tempeture'>{weatherData[activeCity].main.temp}<span>°C</span></p>
+            <p className='description'>{weatherData[activeCity].weather[0].description}</p>
+            <p className='feelsLike'>טמפרטורה מורגשת: {weatherData[activeCity].main.feels_like}<span>°C</span></p>
+            <p className='humidity'>לחות: <span>{weatherData[activeCity].main.humidity}%</span></p>
+          </div>
+        </div>
       </div>
     ) : (
       <p>טוען נתונים...</p>
