@@ -1,0 +1,44 @@
+.App {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  direction: rtl;
+}
+
+h1 {
+  margin-bottom: 20px;
+}
+
+.tabs {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.tab-button {
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  padding: 10px 20px;
+  cursor: pointer;
+  margin: 0 5px;
+  transition: background-color 0.3s;
+}
+
+.tab-button.active {
+  border: 2px solid #f0f0f0;
+  background-color: #007bff;
+  color: #f0f0f0;
+}
+
+.weather-info {
+  border: 1px solid #ddd;
+  display: inline-block;
+  padding: 20px;
+  width: 300px;
+  text-align: right; /* Aligns the text inside the block to the right */
+  transition: background-color 0.3s ease-in-out; /* Smooth transition for background color */
+}
+
+.weather-info img {
+  width: 100px; 
+  height: 100px; 
+}
