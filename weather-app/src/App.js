@@ -13,6 +13,7 @@ const cities = [
 
 function App() {
   const [weatherData, setWeatherData] = useState({});
+  const [activeCity, setActiveCity] = useState(cities[0].id);
 
   // Fetching Weather Data
   useEffect(() => {
@@ -40,7 +41,24 @@ function App() {
   }, []);
 
 
-  return(<h1>Weather System</h1>);
+  return(
+    <div className="App">
+    <h1>מזג אוויר עולמי</h1>
+    <div className="tabs">
+      {cities.map((city) => (
+        <button
+          key={city.id}
+          className={`tab-button ${activeCity === city.id ? 'active' : ''}`}
+          onClick={() => setActiveCity(city.id)}
+        >
+          {city.name}
+        </button>
+      ))}
+    </div>
+
+
+</div>
+);
 }
 
 export default App;
