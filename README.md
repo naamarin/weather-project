@@ -1,6 +1,6 @@
 # Weather System
 
-A weather application built with React that allows users to search for cities and view current weather conditions, including temperature, feels like temperature, and humidity. 
+A weather application built with React that allows users to view current weather conditions in chosen citys, including temperature, feels like temperature, and humidity. 
 
 ## Features
 
@@ -22,11 +22,9 @@ A weather application built with React that allows users to search for cities an
 
 ## Demo
 
-Add a link to a live demo if hosted.
+Here is a screenshot of the app:
+![image](https://github.com/user-attachments/assets/1b5cbda7-c43f-45d9-aa40-5d4a0a1e8d86)
 
-Example:
-
-You can check the live demo [here](https://weather-app-demo.com).
 
 ## Technologies Used
 
